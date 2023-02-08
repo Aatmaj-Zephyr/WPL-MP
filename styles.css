@@ -1,0 +1,109 @@
+.redMat{
+    /* KJSCE red mat */
+
+
+box-sizing: border-box;
+
+position: absolute;
+width: 197px;
+height: 465px;
+left: 0px;
+top: 0px;
+
+background: #F40A0A;
+border: 1px solid #000000;
+}
+.darkRed{
+/* KJSCE dark red */
+
+
+position: absolute;
+width: 140px;
+height: 465px;
+left: 0px;
+top: 0px;
+
+background: #CA0303;
+}
+.screen{
+    /* Screen */
+
+
+position: relative;
+
+background: linear-gradient(168.55deg, #FFFFFF 0%, #EEFCFF 100%);
+}
+.button{
+    /* Button */
+
+    cursor: pointer;
+box-sizing: border-box;
+
+position: relative;
+width: 255px;
+height: 80px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+border: 1px solid red;
+}
+.buttontext{
+/* Text */
+
+
+position: relative;
+text-align: center;
+font-family: 'Comic Sans MS';
+font-style: normal;
+font-weight: 400;
+font-size: 45px;
+line-height: 40px;
+
+color: #000000;
+}
+.container{
+    /* Container */
+
+
+box-sizing: border-box;
+
+position: absolute;
+width: 298px;
+height: 636px;
+left: 31px;
+top: 36px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+}
+.SomaiyaDigitalIDcardportal{
+ /* Digital ID card portal */
+
+
+position: absolute;
+width: 258px;
+left: calc(50% - 258px/2);
+top: 30.19%;
+bottom: 43.3%;
+
+font-family: 'Amaranth';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+
+color: #000000;
+
+}
+.Somaiyalogo{
+    /* Group 4579 */
+
+
+position: absolute;
+left: 6.71%;
+right: 10.17%;
+top: 5.03%;
+bottom: 83.68%;
+}
