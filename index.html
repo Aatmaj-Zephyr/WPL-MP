@@ -1,9 +1,11 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
-        <script src="main.js"></script>  
+        
         <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js "></script>
+
 
     </head>
     <body clas="screen">
@@ -22,11 +24,17 @@
             width: 255px;
             height: 80px;
             left: calc(50% - 255px/2 - 1.5px);
-            top: calc(50% - 80px/2 + 142px);" class="button" onclick="Login()" id="loginButton">
+            top: calc(50% - 80px/2 + 142px);" class="button" onclick="goToAuth()" id="loginButton">
                 <div class="buttontext" >
                     Log In
                 </div>
             </button>
+            <script>
+                function goToAuth(){
+                    window.location.href = "./auth.html";
+                }
+            </script>
         </div>
-     
+       
+     </body>
 </html>
