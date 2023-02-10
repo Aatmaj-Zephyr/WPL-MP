@@ -110,7 +110,7 @@ bottom: 83.68%;
 font-size:30px;
 box-sizing: border-box;
 
-position: relative;
+
 width: 271px;
 height: 66px;
 
@@ -124,4 +124,59 @@ border: 1px solid #000000;
     font-size: 40px;
     line-height: 48px;
     text-align: center;
+}
+.IDcontainer{
+    /* ID card */
+
+
+box-sizing: border-box;
+
+position: relative;
+width: 70%;
+height: 80%;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 25px;
+}
+.photoplaceHolder{
+    /* Rectangle 1 */
+
+
+position: absolute;
+left: -0.31%;
+right: 50%;
+top: 30.5%;
+bottom: 37.77%;
+
+background: #C1ACAC;
+}
+.studentText{
+    /* STUDENT */
+
+
+position: absolute;
+width: 173px;
+height: 48px;
+left: 149px;
+top: 215px;
+
+font-family: 'Actor';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+
+color: #FFFFFF;
+
+transform: rotate(-90deg);
+}
+.IDtransparentframe{
+    /* Frame 1 */
+
+
+
+
+background: #DADADA;
 }
