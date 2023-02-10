@@ -131,9 +131,8 @@ border: 1px solid #000000;
 
 box-sizing: border-box;
 
-position: relative;
-width: 70%;
-height: 80%;
+width: 320px;
+height: 564px;
 
 background: #FFFFFF;
 border: 1px solid #000000;
@@ -143,23 +142,11 @@ border-radius: 25px;
     /* Rectangle 1 */
 
 
-position: absolute;
-left: -0.31%;
-right: 50%;
-top: 30.5%;
-bottom: 37.77%;
-
 background: #C1ACAC;
 }
 .studentText{
     /* STUDENT */
 
-
-position: absolute;
-width: 173px;
-height: 48px;
-left: 149px;
-top: 215px;
 
 font-family: 'Actor';
 font-style: normal;
@@ -179,4 +166,30 @@ transform: rotate(-90deg);
 
 
 background: #DADADA;
+}
+.IDRedMat{
+/* KJSCE red mat */
+
+
+position: relative;
+height: 236px;
+left: 0%;
+width:20%;
+right: 80%;
+top: 20%;
+
+background: #F40A0A;
+}
+.IDDarkRed{
+/* KJSCE dark red */
+
+
+position: relative;
+height: 236px;
+width:80%;
+left: 20%;
+right: 0%;
+top: 0%;
+
+background: #CA0303;
 }
