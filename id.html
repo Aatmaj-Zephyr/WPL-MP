@@ -9,6 +9,7 @@
             <div class="IDRedMat">   
                 <div class="IDDarkRed"></div>
                 <div class="photoplaceHolder"></div>
+                <div class="studentText">STUDENT</div>
             </div>
         
            
@@ -17,12 +18,42 @@
                     
                     K.J. Somaiya College of Engineering
                 </div>
+                
             </div>
-            <div class="name">AATMAJ K MHATRE</div>
+            <div id="name" class="name">AATMAJ K MHATRE</div>
             <div class="IDNo">ID No: 1620210251</div>
             <div class="bloodGroup">Blood Group: O+</div>
             <div class="tel">Tel:9820775339</div>
             <img  class="somaiyaTrust" src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg">
         </div>
+
+        <script>
+            //preventing inspect element
+
+            // Disable right-click
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};
+
+
+document.getElementById("name").innerHTML="name";
+document.getElementById("name").innerHTML="name";
+//prevent inspect by refreshing after every few seconds
+
+        </script>
     </body>
 </html>
