@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="icon shortcut" href="https://www.somaiya.edu/assets/university/img/svv-emblem.svg" type="image/x-icon" sizes="16x16">
         <link rel="stylesheet" href="styles.css">
         
         <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
@@ -19,13 +20,13 @@
             <div class="text" style="/* SVV net ID */ position: absolute; left: 5.37%; right: 8.05%; top: 22.19%; bottom: 69.95%;">
              SVV Net ID
             </div>
-           <input class="textbox" id="username" style="position: absolute;left: 6%;right: 8%;top: 33.73%;bottom: 55.89%;">
+           <input class="textbox" id="username" style="position: absolute;left: 20%;top: 33.73%;bottom: 55.89%;">
 
             </input>
-            <div class="text" style="position: absolute; left: 5.7%; right: 7.72%; top: 49.93%; bottom: 42.21%;">
+            <div class="text" style="position: absolute; left: 5.37%; right: 7.72%; top: 49.93%; bottom: 42.21%;">
                 Password
                </div>
-              <input class="textbox" id="password" style="position: absolute; left: 6%;right: 8%; top: 61.47%; bottom: 28.15%;">
+              <input class="textbox" id="password" style="position: absolute; left: 20%; top: 61.47%; bottom: 28.15%;">
    
                </input>
                <div class="text" style="font-size:15;position: absolute;
@@ -36,7 +37,11 @@
                Forgot Password?
                </div>
 
-               <button style="position: relative; left: 7.05%; right: 7.38%; top: 80%; " class="button" onclick="Login()" id="loginButton">
+               <button style="position: absolute;
+               width: 255px;
+               height: 80px;
+               left: calc(50% - 255px/2 - 1.5px);
+               top: calc(70% - 80px/2 + 142px); " class="button" onclick="Login()" id="loginButton">
                    <div class="buttontext" >
                        Continue
                    </div>
@@ -51,11 +56,14 @@ var username = document.getElementById('username');
 
 var password = document.getElementById('password');
 
+window.location.href = "./generate.html";
 }
 function forgot(){
     window.location.href = "https://myaccount.somaiya.edu/#/login";
    
 }
+
+
        </script>
      </body>
 </html>

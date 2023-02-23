@@ -67,9 +67,9 @@ color: #000000;
 box-sizing: border-box;
 
 position: absolute;
-width: 298px;
+width: 70%;
 height: 90%;
-left: calc(50% - 298px/2);
+left: 15%;
 top: calc(5%);
 
 background: #FFFFFF;
@@ -95,15 +95,18 @@ text-align: center;
 color: #000000;
 
 }
+.Somaiyalogobox{
+    padding-bottom: 500px;
+}
 .Somaiyalogo{
     /* Group 4579 */
 
 
 position: absolute;
-left: 6.71%;
-right: 10.17%;
-top: 5.03%;
-bottom: 83.68%;
+left: 20%;
+top: 3%;
+
+width:55%;
 }
 .textbox{
     /* Textbox */
@@ -111,7 +114,7 @@ font-size:30px;
 box-sizing: border-box;
 
 
-width: 271px;
+width: 60%;
 height: 66px;
 
 background: #FFFFFF;
