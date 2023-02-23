@@ -167,6 +167,9 @@ transform: rotate(-90deg);
 
 background: #DADADA;
 }
+.IDLogo{
+    position: relative; left: 5%; right: 15%; top: 4.5%; bottom: 82%; height: 15%; 
+}
 .IDRedMat{
 /* KJSCE red mat */
 
@@ -174,9 +177,9 @@ background: #DADADA;
 position: relative;
 height: 236px;
 left: 0%;
-width:20%;
+width: 100%;
 right: 80%;
-top: 20%;
+top: 10%;
 
 background: #F40A0A;
 }
@@ -192,4 +195,152 @@ right: 0%;
 top: 0%;
 
 background: #CA0303;
+}
+.photoplaceHolder{
+    /* Rectangle 1 */
+
+
+position: absolute;
+width: 50%;
+height: 75%;
+left: 0%;
+bottom:  0%;
+
+
+background: #747474;
+}
+.IDtransparentframe{
+/* Frame 1 */
+
+
+position: relative;
+width: 100%;
+height: 5%;
+left: 0%;
+top:10%;
+
+background: #DADADA;
+}
+.clgText{
+    /* K J Somaiya College of Engineering */
+
+
+position: absolute;
+width: 274px;
+height: 25px;
+left: 24px;
+top: 10%;
+font-weight: bold;
+font-family: 'Constantia';
+font-style: normal;
+font-size: 15px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+.name{
+
+
+/* AATMAJ K MHATRE */
+
+
+position: absolute;
+width: 100%px;
+height: 28px;
+left: 15px;
+top: 425px;
+
+font-family: 'Bahnschrift ';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height */
+
+text-align: center;
+
+color: #CA0303;
+
+
+}
+.IDNo{
+    /* ID No: 1620210251 */
+
+
+position: absolute;
+
+height: 18px;
+left: 14px;
+top: 458px;
+
+font-family: 'Bahnschrift ';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+
+}
+.bloodGroup{
+   /* Blood Group: O+ */
+
+
+position: absolute;
+height: 18px;
+left: 14px;
+top: 478px;
+
+font-family: 'Bahnschrift ';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+
+
+}
+.tel{
+    /* Tel: 9820775339 */
+
+
+position: absolute;
+width: 92px;
+height: 18px;
+left: 209px;
+top: 458px;
+
+font-family: 'Bahnschrift ';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+.somaiyaTrust{
+    /* somaiya-trust 1 */
+
+
+/* somaiya-trust 1 */
+
+
+position: absolute;
+width: 53.6px;
+height: 40px;
+left: 250px;
+top: 500px;
+
+
 }
