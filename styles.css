@@ -130,9 +130,12 @@ border: 1px solid #000000;
 
 
 box-sizing: border-box;
+position: sticky;
+left: 10%;
+top: 10%;
+width:800px;
+height: 1500px;
 
-width: 320px;
-height: 564px;
 
 background: #FFFFFF;
 border: 1px solid #000000;
@@ -168,14 +171,14 @@ transform: rotate(-90deg);
 background: #DADADA;
 }
 .IDLogo{
-    position: relative; left: 5%; right: 15%; top: 4.5%; bottom: 82%; height: 15%; 
+    position: relative; left: 10%;  top: 4.5%; bottom: 82%; height: 10%; 
 }
 .IDRedMat{
 /* KJSCE red mat */
 
 
 position: relative;
-height: 236px;
+height: 40%;
 left: 0%;
 width: 100%;
 right: 80%;
@@ -183,12 +186,33 @@ top: 10%;
 
 background: #F40A0A;
 }
+.studentText{
+    /* STUDENT */
+
+
+position: absolute;
+width: 30%;
+height: 10%;
+right: 10%;
+top: 60%;
+
+font-family: 'Actor';
+font-style: normal;
+font-weight: 500;
+font-size: 80px;
+line-height: 80px;
+text-align: center;
+
+color: #FFFFFF;
+
+transform: rotate(-90deg);
+}
 .IDDarkRed{
 /* KJSCE dark red */
 
 
 position: relative;
-height: 236px;
+height: 100%;
 width:80%;
 left: 20%;
 right: 0%;
@@ -226,15 +250,14 @@ background: #DADADA;
 
 
 position: absolute;
-width: 274px;
-height: 25px;
-left: 24px;
-top: 10%;
+width: 100%;
+height: 3%;
+top: 20%;
 font-weight: bold;
 font-family: 'Constantia';
 font-style: normal;
-font-size: 15px;
-line-height: 25px;
+font-size: 35px;
+line-height: 35px;
 text-align: center;
 
 color: #000000;
@@ -246,15 +269,15 @@ color: #000000;
 
 
 position: absolute;
-width: 100%px;
+width: 100%;
 height: 28px;
-left: 15px;
-top: 425px;
+right:15%;
+top: 67%;
 
 font-family: 'Bahnschrift ';
 font-style: normal;
 font-weight: 400;
-font-size: 20px;
+font-size: 50px;
 line-height: 28px;
 /* identical to box height */
 
@@ -271,14 +294,14 @@ color: #CA0303;
 position: absolute;
 
 height: 18px;
-left: 14px;
-top: 458px;
+left:5%;
+top: 74%;
 
 font-family: 'Bahnschrift ';
 font-style: normal;
 font-weight: 400;
-font-size: 14px;
-line-height: 18px;
+font-size: 35px;
+line-height: 35px;
 /* identical to box height */
 
 text-align: center;
@@ -292,14 +315,14 @@ color: #000000;
 
 position: absolute;
 height: 18px;
-left: 14px;
-top: 478px;
+left:5%;
+top: 78%;
 
 font-family: 'Bahnschrift ';
 font-style: normal;
 font-weight: 400;
-font-size: 12px;
-line-height: 18px;
+font-size: 35px;
+line-height: 35px;
 /* identical to box height */
 
 text-align: center;
@@ -313,16 +336,15 @@ color: #000000;
 
 
 position: absolute;
-width: 92px;
 height: 18px;
-left: 209px;
-top: 458px;
+right:5%;
+top: 74%;
 
 font-family: 'Bahnschrift ';
 font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
+font-weight: 400;   
+font-size: 35px;
+line-height: 35px;
 /* identical to box height */
 
 text-align: center;
@@ -337,10 +359,10 @@ color: #000000;
 
 
 position: absolute;
-width: 53.6px;
-height: 40px;
-left: 250px;
-top: 500px;
+width: 20%;
+height: 20%;
+right: 10%;
+top: 80%;
 
 
 }
