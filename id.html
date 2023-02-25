@@ -55,9 +55,34 @@ document.onkeydown = (e) => {
 //document.getElementById("name").innerHTML="name";
 //document.getElementById("name").innerHTML="name";
 //prevent inspect by refreshing after every few seconds
+/*
+setInterval(function() {
+    // your code goes here...
+   
+  
+}, 60 * 1000); // 60 * 1000 milsec
 
+*/
 
-//safery measures to prevent storage of id card.
+//safery measures to prevent storage of id card by refreshing after every 60 seconds
+setInterval(function() {
+    // your code goes here...
+    localStorage.setItem("Generated", "False");
+    window.location.href = "./generate.html";//session expires
+    console.log("session expired");
+}, 60 * 1000); // 60 * 1000 milsec
+
+checkLink();
+function checkLink(){
+    // this is also a safety measure to prevent direct link access
+    if(localStorage.getItem("Generated")=="True"){
+        localStorage.setItem("Generated", "False");
+    }
+    else{
+        //site tampered with
+        window.location.href = "./generate.html";
+    }
+}
 
 
 

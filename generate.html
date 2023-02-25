@@ -34,6 +34,20 @@
                 function generate(){
                     //check credentials first from local storage, etc
                     window.location.href = "./id.html";
+                    localStorage.setItem("Generated", "True");
+
+                }
+                checkAuth();//check if site is authenticated or not.
+                function checkAuth(){
+                    //prevent direct access to webpage.
+                    //called only once. Once the local storage is set, it is not changed again till cookies are cleared. (or local storage is cleared)
+                    if(localStorage.getItem("Authenticated")=="True"){
+                      //correct
+                    }
+                    else{
+                        //site direct accessed. Prevent it
+                        window.location.href = "./auth.html";
+    }
                 }
             </script>
         </div>

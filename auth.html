@@ -55,7 +55,9 @@ function Login(){
 var username = document.getElementById('username');
 
 var password = document.getElementById('password');
-
+//check username and password validity
+//if valid then go to login page.
+localStorage.setItem("Authenticated", "True");
 window.location.href = "./generate.html";
 }
 function forgot(){
