@@ -1,374 +1,344 @@
-.redMat{
-    /* KJSCE red mat */
+.redMat {
+	/* KJSCE red mat */
 
-
-box-sizing: border-box;
-position: absolute;
-left: 0%;
-right: 45.28%;
-top: 0%;
-bottom: 41.88%;
-background: #F40A0A;
-border: 1px solid #000000;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0%;
+	right: 45.28%;
+	top: 0%;
+	bottom: 41.88%;
+	background: #f40a0a;
+	border: 1px solid #000000;
 }
-.darkRed{
-/* KJSCE dark red */
+.darkRed {
+	/* KJSCE dark red */
 
+	position: absolute;
+	left: 0%;
+	right: 28.93%;
+	top: 0%;
+	bottom: 0%;
 
-
-position: absolute;
-left: 0%;
-right: 28.93%;
-top: 0%;
-bottom: 0%;
-
-background: #CA0303;
+	background: #ca0303;
 }
-.screen{
-    /* Screen */
+.screen {
+	/* Screen */
 
+	position: relative;
 
-position: relative;
-
-background: linear-gradient(168.55deg, #FFFFFF 0%, #EEFCFF 100%);
+	background: linear-gradient(168.55deg, #ffffff 0%, #eefcff 100%);
 }
-.button{
-    /* Button */
+.button {
+	/* Button */
 
-    cursor: pointer;
-box-sizing: border-box;
+	cursor: pointer;
+	box-sizing: border-box;
 
-position: relative;
-width: 255px;
-height: 80px;
-background: linear-gradient(90.46deg, #BBFFCE 0.4%, #D9FFE3 35.8%, #FFFFFF 99.67%);
-box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
-border-radius: 30px;
-border: 1px solid red;
+	position: relative;
+	width: 255px;
+	height: 80px;
+	background: linear-gradient(
+		90.46deg,
+		#bbffce 0.4%,
+		#d9ffe3 35.8%,
+		#ffffff 99.67%
+	);
+	box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 30px;
+	border: 1px solid red;
 }
-.buttontext{
-/* Text */
+.buttontext {
+	/* Text */
 
+	position: relative;
+	text-align: center;
+	font-family: "Comic Sans MS";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 45px;
+	line-height: 40px;
 
-position: relative;
-text-align: center;
-font-family: 'Comic Sans MS';
-font-style: normal;
-font-weight: 400;
-font-size: 45px;
-line-height: 40px;
-
-color: #000000;
+	color: #000000;
 }
-.container{
-    /* Container */
+.container {
+	/* Container */
 
+	box-sizing: border-box;
 
-box-sizing: border-box;
+	position: absolute;
+	width: 70%;
+	height: 90%;
+	left: 15%;
+	top: calc(5%);
 
-position: absolute;
-width: 70%;
-height: 90%;
-left: 15%;
-top: calc(5%);
-
-background: #FFFFFF;
-border: 1px solid #000000;
+	background: #ffffff;
+	border: 1px solid #000000;
 }
-.SomaiyaDigitalIDcardportal{
- /* Digital ID card portal */
+.SomaiyaDigitalIDcardportal {
+	/* Digital ID card portal */
 
+	position: absolute;
+	width: 258px;
+	left: calc(50% - 258px / 2);
+	top: 30.19%;
+	bottom: 43.3%;
 
-position: absolute;
-width: 258px;
-left: calc(50% - 258px/2);
-top: 30.19%;
-bottom: 43.3%;
+	font-family: "Amaranth";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
 
-font-family: 'Amaranth';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 48px;
-text-align: center;
-
-color: #000000;
-
+	color: #000000;
 }
-.Somaiyalogobox{
-    padding-bottom: 500px;
+.Somaiyalogobox {
+	padding-bottom: 500px;
 }
-.Somaiyalogo{
-    /* Group 4579 */
+.Somaiyalogo {
+	/* Group 4579 */
 
+	position: absolute;
+	left: 20%;
+	top: 3%;
 
-position: absolute;
-left: 20%;
-top: 3%;
-
-width:55%;
+	width: 55%;
 }
-.textbox{
-    /* Textbox */
-font-size:30px;
-box-sizing: border-box;
+.textbox {
+	/* Textbox */
+	font-size: 30px;
+	box-sizing: border-box;
 
+	width: 60%;
+	height: 66px;
 
-width: 60%;
-height: 66px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
+	background: #ffffff;
+	border: 1px solid #000000;
 }
-.text{
-    font-family: 'Amaranth';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    text-align: center;
+.text {
+	font-family: "Amaranth";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
 }
-.IDcontainer{
-    /* ID card */
+.IDcontainer {
+	/* ID card */
 
+	box-sizing: border-box;
+	position: sticky;
 
-box-sizing: border-box;
-position: sticky;
+	left: 10%;
+	top: 10%;
+	width: 800px;
+	height: 1500px;
 
-left: 10%;
-top: 10%;
-width:800px;
-height: 1500px;
-
-
-background: #FFFFFF;
-border: 1px solid #000000;
-border-radius: 25px;
-box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.4);
-border-radius: 25px;
+	background: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 25px;
+	box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.4);
+	border-radius: 25px;
 }
-.photoplaceHolder{
-    /* Rectangle 1 */
+.photoplaceHolder {
+	/* Rectangle 1 */
 
-
-background: #C1ACAC;
+	background: #c1acac;
 }
-.studentText{
-    /* STUDENT */
+.studentText {
+	/* STUDENT */
 
+	font-family: "Actor";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
 
-font-family: 'Actor';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 48px;
-text-align: center;
+	color: #ffffff;
 
-color: #FFFFFF;
-
-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
-.IDtransparentframe{
-    /* Frame 1 */
+.IDtransparentframe {
+	/* Frame 1 */
 
-
-
-
-background: #DADADA;
+	background: #dadada;
 }
-.IDLogo{
-    position: relative; left: 10%;  top: 4.5%; bottom: 82%; height: 10%; 
+.IDLogo {
+	position: relative;
+	left: 10%;
+	top: 4.5%;
+	bottom: 82%;
+	height: 10%;
 }
-.IDRedMat{
-/* KJSCE red mat */
+.IDRedMat {
+	/* KJSCE red mat */
 
+	position: relative;
+	height: 40%;
+	left: 0%;
+	width: 100%;
+	right: 80%;
+	top: 10%;
 
-position: relative;
-height: 40%;
-left: 0%;
-width: 100%;
-right: 80%;
-top: 10%;
-
-background: #F40A0A;
+	background: #f40a0a;
 }
-.studentText{
-    /* STUDENT */
+.studentText {
+	/* STUDENT */
 
+	position: absolute;
+	width: 30%;
+	height: 10%;
+	right: 10%;
+	top: 60%;
 
-position: absolute;
-width: 30%;
-height: 10%;
-right: 10%;
-top: 60%;
+	font-family: "Actor";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 80px;
+	line-height: 80px;
+	text-align: center;
 
-font-family: 'Actor';
-font-style: normal;
-font-weight: 500;
-font-size: 80px;
-line-height: 80px;
-text-align: center;
+	color: #ffffff;
 
-color: #FFFFFF;
-
-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
-.IDDarkRed{
-/* KJSCE dark red */
+.IDDarkRed {
+	/* KJSCE dark red */
 
+	position: relative;
+	height: 100%;
+	width: 80%;
+	left: 20%;
+	right: 0%;
+	top: 0%;
 
-position: relative;
-height: 100%;
-width:80%;
-left: 20%;
-right: 0%;
-top: 0%;
-
-background: #CA0303;
+	background: #ca0303;
 }
-.photoplaceHolder{
-    /* Rectangle 1 */
+.photoplaceHolder {
+	/* Rectangle 1 */
 
+	position: absolute;
+	width: 50%;
+	height: 75%;
+	left: 0%;
+	bottom: 0%;
 
-position: absolute;
-width: 50%;
-height: 75%;
-left: 0%;
-bottom:  0%;
-
-
-background: #747474;
+	background: #747474;
 }
-.IDtransparentframe{
-/* Frame 1 */
+.IDtransparentframe {
+	/* Frame 1 */
 
+	position: relative;
+	width: 100%;
+	height: 5%;
+	left: 0%;
+	top: 10%;
 
-position: relative;
-width: 100%;
-height: 5%;
-left: 0%;
-top:10%;
-
-background: #DADADA;
+	background: #dadada;
 }
-.clgText{
-    /* K J Somaiya College of Engineering */
+.clgText {
+	/* K J Somaiya College of Engineering */
 
+	position: absolute;
+	width: 100%;
+	height: 3%;
+	top: 20%;
+	font-weight: bold;
+	font-family: "Constantia";
+	font-style: normal;
+	font-size: 35px;
+	line-height: 35px;
+	text-align: center;
 
-position: absolute;
-width: 100%;
-height: 3%;
-top: 20%;
-font-weight: bold;
-font-family: 'Constantia';
-font-style: normal;
-font-size: 35px;
-line-height: 35px;
-text-align: center;
-
-color: #000000;
+	color: #000000;
 }
-.name{
+.name {
+	/* AATMAJ K MHATRE */
 
+	position: absolute;
+	width: 100%;
+	height: 28px;
+	right: 15%;
+	top: 67%;
 
-/* AATMAJ K MHATRE */
+	font-family: "Bahnschrift ";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 28px;
+	/* identical to box height */
 
+	text-align: center;
 
-position: absolute;
-width: 100%;
-height: 28px;
-right:15%;
-top: 67%;
-
-font-family: 'Bahnschrift ';
-font-style: normal;
-font-weight: 400;
-font-size: 50px;
-line-height: 28px;
-/* identical to box height */
-
-text-align: center;
-
-color: #CA0303;
-
-
+	color: #ca0303;
 }
-.IDNo{
-    /* ID No: 1620210251 */
+.IDNo {
+	/* ID No: 1620210251 */
 
+	position: absolute;
 
-position: absolute;
+	height: 18px;
+	left: 5%;
+	top: 74%;
 
-height: 18px;
-left:5%;
-top: 74%;
+	font-family: "Bahnschrift ";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 35px;
+	/* identical to box height */
 
-font-family: 'Bahnschrift ';
-font-style: normal;
-font-weight: 400;
-font-size: 35px;
-line-height: 35px;
-/* identical to box height */
+	text-align: center;
 
-text-align: center;
-
-color: #000000;
-
+	color: #000000;
 }
-.bloodGroup{
-   /* Blood Group: O+ */
+.bloodGroup {
+	/* Blood Group: O+ */
 
+	position: absolute;
+	height: 18px;
+	left: 5%;
+	top: 78%;
 
-position: absolute;
-height: 18px;
-left:5%;
-top: 78%;
+	font-family: "Bahnschrift ";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 35px;
+	/* identical to box height */
 
-font-family: 'Bahnschrift ';
-font-style: normal;
-font-weight: 400;
-font-size: 35px;
-line-height: 35px;
-/* identical to box height */
+	text-align: center;
 
-text-align: center;
-
-color: #000000;
-
-
+	color: #000000;
 }
-.tel{
-    /* Tel: 9820775339 */
+.tel {
+	/* Tel: 9820775339 */
 
+	position: absolute;
+	height: 18px;
+	right: 5%;
+	top: 74%;
 
-position: absolute;
-height: 18px;
-right:5%;
-top: 74%;
+	font-family: "Bahnschrift ";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 35px;
+	/* identical to box height */
 
-font-family: 'Bahnschrift ';
-font-style: normal;
-font-weight: 400;   
-font-size: 35px;
-line-height: 35px;
-/* identical to box height */
+	text-align: center;
 
-text-align: center;
-
-color: #000000;
+	color: #000000;
 }
-.somaiyaTrust{
-    /* somaiya-trust 1 */
+.somaiyaTrust {
+	/* somaiya-trust 1 */
 
+	/* somaiya-trust 1 */
 
-/* somaiya-trust 1 */
-
-
-position: absolute;
-width: 20%;
-height: 20%;
-right: 10%;
-top: 80%;
-
-
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	right: 10%;
+	top: 80%;
 }

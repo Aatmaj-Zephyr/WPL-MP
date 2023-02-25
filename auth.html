@@ -29,19 +29,11 @@
               <input class="textbox" id="password" style="position: absolute; left: 20%; top: 61.47%; bottom: 28.15%;">
    
                </input>
-               <div class="text" style="font-size:15;position: absolute;
-               left: 24.16%;
-               right: 25.84%;
-               top: 73%;
-               bottom: 12%; cursor:pointer" onclick="forgot()">
+               <div class="text" style="font-size:15;position: absolute;left: 24.16%;right: 25.84%;top: 73%;bottom: 12%; cursor:pointer" onclick="forgot()">
                Forgot Password?
                </div>
 
-               <button style="position: absolute;
-               width: 255px;
-               height: 80px;
-               left: calc(50% - 255px/2 - 1.5px);
-               top: calc(70% - 80px/2 + 142px); " class="button" onclick="Login()" id="loginButton">
+               <button style="position: absolute;width: 255px;height: 80px;left: calc(50% - 255px/2 - 1.5px);top: calc(70% - 80px/2 + 142px); " class="button" onclick="Login()" id="loginButton">
                    <div class="buttontext" >
                        Continue
                    </div>
@@ -51,14 +43,14 @@
         </div>
        <script>
 function Login(){
-    console.log("click");
-var username = document.getElementById('username');
+            console.log("click");
+            var username = document.getElementById('username');
 
-var password = document.getElementById('password');
-//check username and password validity
-//if valid then go to login page.
-localStorage.setItem("Authenticated", "True");
-window.location.href = "./generate.html";
+            var password = document.getElementById('password');
+            //check username and password validity
+            //if valid then go to login page.
+            localStorage.setItem("Authenticated", "True");
+            window.location.href = "./generate.html";
 }
 function forgot(){
     window.location.href = "https://myaccount.somaiya.edu/#/login";

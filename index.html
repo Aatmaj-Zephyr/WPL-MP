@@ -1,43 +1,48 @@
 <html>
-    <head>
-        <link rel="icon shortcut" href="https://www.somaiya.edu/assets/university/img/svv-emblem.svg" type="image/x-icon" sizes="16x16">
-        <link rel="stylesheet" href="styles.css">
-        
-        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js "></script>
+	<head>
+		<link
+			rel="icon shortcut"
+			href="https://www.somaiya.edu/assets/university/img/svv-emblem.svg"
+			type="image/x-icon"
+			sizes="16x16"
+		/>
+		<link rel="stylesheet" href="styles.css" />
 
-
-    </head>
-    <body clas="screen">
-        
-        <div class="redMat">
-            <div class="darkRed"></div>
-        
-        </div>
-        <div class="container">
-           <div class="Somaiyalogobox"> 
-                <img class="Somaiyalogo" src="https://www.somaiya.edu/assets/university/img/homepage/university-logo.svg">
-           </div>
-            <div class="SomaiyaDigitalIDcardportal">
-              Digital ID card portal
-            </div>
-            <button style="
-            position: absolute;
-            width: 255px;
-            height: 80px;
-            left: calc(50% - 255px/2 - 1.5px);
-            top: calc(50% - 80px/2 + 142px);" class="button" onclick="goToAuth()" id="loginButton">
-                <div class="buttontext" >
-                    Log In
-                </div>
-            </button>
-            <script>
-                function goToAuth(){
-                    window.location.href = "./auth.html";
-                }
-            </script>
-        </div>
-       
-     </body>
+		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js "></script>
+	</head>
+	<body clas="screen">
+		<div class="redMat">
+			<div class="darkRed"></div>
+		</div>
+		<div class="container">
+			<div class="Somaiyalogobox">
+				<img
+					class="Somaiyalogo"
+					src="https://www.somaiya.edu/assets/university/img/homepage/university-logo.svg"
+				/>
+			</div>
+			<div class="SomaiyaDigitalIDcardportal">Digital ID card portal</div>
+			<button
+				style="
+					position: absolute;
+					width: 255px;
+					height: 80px;
+					left: calc(50% - 255px / 2 - 1.5px);
+					top: calc(50% - 80px / 2 + 142px);
+				"
+				class="button"
+				onclick="goToAuth()"
+				id="loginButton"
+			>
+				<div class="buttontext">Log In</div>
+			</button>
+			<script>
+				function goToAuth() {
+					window.location.href = "./auth.html";
+				}
+			</script>
+		</div>
+	</body>
 </html>
