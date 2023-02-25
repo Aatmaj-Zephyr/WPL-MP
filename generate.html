@@ -51,6 +51,61 @@
 					}
 				}
 			</script>
+            <script>
+                //prevent opening of inspect element.
+                const devtools = {
+                isOpen: false,
+                orientation: undefined,
+            };
+            
+            const threshold = 170;
+            
+            const emitEvent = (isOpen, orientation) => {
+                globalThis.dispatchEvent(new globalThis.CustomEvent('devtoolschange', {
+                    detail: {
+                        isOpen,
+                        orientation,
+                    },
+                }));
+            };
+            setInterval(function () {
+                            // your code goes here...
+                            if(check()==true){
+                                window.location.href = "./auth.html";//inspect element opened
+            
+                            }
+                            console.log(check())
+                        
+                        }, 2 * 1000); // 60 * 1000 milsec
+            
+            function check(){
+                const emitEvents = true
+                const widthThreshold = globalThis.outerWidth - globalThis.innerWidth > threshold;
+                const heightThreshold = globalThis.outerHeight - globalThis.innerHeight > threshold;
+                const orientation = widthThreshold ? 'vertical' : 'horizontal';
+            
+                if (
+                    !(heightThreshold && widthThreshold)
+                    && ((globalThis.Firebug && globalThis.Firebug.chrome && globalThis.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)
+                ) {
+                    if ((!devtools.isOpen || devtools.orientation !== orientation) && emitEvents) {
+                        emitEvent(true, orientation);
+                    }
+            
+                    devtools.isOpen = true;
+                    return true;
+                    devtools.orientation = orientation;
+                } else {
+                    if (devtools.isOpen && emitEvents) {
+                        emitEvent(false, undefined);
+                    }
+            
+                    devtools.isOpen = false;
+                    devtools.orientation = undefined;
+                    return false;
+                }
+            };
+            </script>
 		</div>
 	</body>
 </html>
