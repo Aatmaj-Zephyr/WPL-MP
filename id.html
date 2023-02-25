@@ -17,7 +17,7 @@
 			/>
 			<div class="IDRedMat">
 				<div class="IDDarkRed"></div>
-				<div class="photoplaceHolder"></div>
+				<img id="image" src="https://avatars.githubusercontent.com/u/83284294?v=4" class="photoplaceHolder">
 				<div class="studentText">STUDENT</div>
 			</div>
 
@@ -25,9 +25,9 @@
 				<div class="clgText">K.J. Somaiya College of Engineering</div>
 			</div>
 			<div id="name" class="name">AATMAJ K MHATRE</div>
-			<div class="IDNo">ID No: 1620210251</div>
-			<div class="bloodGroup">Blood Group: O+</div>
-			<div class="tel">Tel:9820775339</div>
+			<div id="IDnum" class="IDNo">ID No: 1620210251</div>
+			<div id="bloodGroup" class="bloodGroup">Blood Group: O+</div>
+			<div id="telephone" class="tel">Tel:9820775339</div>
 			<img
 				class="somaiyaTrust"
 				src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg"
@@ -56,9 +56,14 @@
 					return false;
 			};
 
-			//do in php
+            //do in php
+            let id=1620210251;
+            document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
+			document.getElementById("IDnum").innerHTML=id;
+			
 			//document.getElementById("name").innerHTML="name";
 			//document.getElementById("name").innerHTML="name";
+
 			//prevent inspect by refreshing after every few seconds
 			/*
 setInterval(function() {
