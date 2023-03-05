@@ -3,9 +3,7 @@
         <link rel="icon shortcut" href="https://www.somaiya.edu/assets/university/img/svv-emblem.svg" type="image/x-icon" sizes="16x16">
         <link rel="stylesheet" href="styles.css">
         <title> Somaiya Digital ID </title>
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
+        
 
 
     </head>
@@ -44,19 +42,7 @@
        <script>
 
 
-//initialize email sender
-    
-emailjs.init("NwP28W48Ywhti_Dlp");
 
-   //send email function.
-   // need to check svvid validity first.
-  function sendEmail(email){
-     emailjs.send("service_xmbgg0r","template_e8pro9q",{
-to_name: email,
-reply_to: "aatmaj.m@somaiya.edu",
-});
-console.log("sendEmail");
-  }
   
   function Login(){
             console.log("click");
@@ -67,18 +53,12 @@ console.log("sendEmail");
             //check username and password validity
 
             //if valid then go to generate page.
-            localStorage.setItem("Authenticated", "True");
-            
-            sendEmail(username+"@somaiya.edu");
-            setTimeout(() => { 
-                console.log("Now redirecting!"); 
-                
-                //redirect to generate page
-                window.location.href = "./generate.html";
-             }, 2000);//wait before redirecting to generate page
-            
-
-            
+            localStorage.setItem("Authenticated", "Partial");
+            localStorage.setItem("mail",username+"@somaiya.edu");
+            window.location.href = "./twoFactorAuth.html"; //redirect to two factor auth page
+            //if two factor authentication performed for the first time then go to generate page
+            //localStorage.setItem("Authenticated", "true");
+          
 }
 
 function forgot(){

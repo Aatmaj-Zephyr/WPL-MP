@@ -1,0 +1,169 @@
+<html>
+	<head>
+		<title> Somaiya Digital ID </title>
+		<link
+			rel="icon shortcut"
+			href="https://www.somaiya.edu/assets/university/img/svv-emblem.svg"
+			type="image/x-icon"
+			sizes="16x16"
+		/>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+		<link rel="stylesheet" href="styles.css" />
+
+	</head>
+	<body clas="screen">
+		<div class="redMat">
+			<div class="darkRed"></div>
+		</div>
+		<div class="container">
+			<img
+				class="Somaiyalogo"
+				src="https://www.somaiya.edu/assets/university/img/homepage/university-logo.svg"
+			/>
+			<div class="SomaiyaDigitalIDcardportal">Two Factor Authentication</div>
+            <div class="otpcontainer">
+            <input class="otp" type="text" id='first' maxlength="1" onkeyup="clickEvent(this,'sec')">
+            <input class="otp" type="text" id="sec" maxlength="1" onkeyup="clickEvent(this,'third')">
+            <input class="otp" type="text" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+            <input class="otp" type="text" id="fourth" maxlength="1" onkeyup="checkOTP()">
+            
+            </div>
+
+			<button
+				style="
+					position: absolute;
+					width: 255px;
+					height: 80px;
+					left: calc(50% - 255px / 2 - 1.5px);
+					top: calc(50% - 80px / 2 + 142px);
+				"
+				class="button"
+				onclick="sendEmail()"
+				id="loginButton"
+			>
+				<div class="buttontext">Resend</div>
+			</button>
+            <script>
+                //for OTP delete does not work for now...
+                function clickEvent(first,last){
+                if(first.value.length){
+                    document.getElementById(last).focus();
+                }
+                }
+            </script>
+            <script>
+                //initialize email sender
+    
+                emailjs.init("NwP28W48Ywhti_Dlp");
+
+                sendEmail();   //send email function.
+
+                function checkOTP(){
+                    var enteredOTP = ""+document.getElementById("first").value+document.getElementById("sec").value+document.getElementById("third").value+document.getElementById("fourth").value;
+                    if(enteredOTP==fetchOtp(localStorage.getItem("mail"))){
+                        localStorage.setItem("Authenticated", "True");
+                        window.location.href = "./generate.html";
+                    }
+                }
+
+                function fetchOtp(email){
+                    //NOT STORING OTP
+
+                    //please return a string.
+                    //fetch OTP from the email from the database
+
+                    //for testin otp is 0108
+                    return "0108"
+                }
+
+                function sendEmail(){ //send email function for two-factor authentication
+                    var email = localStorage.getItem("mail");
+                    var OTP = fetchOtp(email);
+                emailjs.send("service_xmbgg0r","template_e8pro9q",{
+                message:OTP,
+                to_name: email,
+                reply_to: "aatmaj.m@somaiya.edu",
+                });
+                console.log("sendEmail");
+                }
+            </script>
+			<script>
+
+				
+				checkAuth(); //check if site is authenticated or not.
+				function checkAuth() {
+					//prevent direct access to webpage.
+					//called only once. Once the local storage is set, it is not changed again till cookies are cleared. (or local storage is cleared)
+					if (localStorage.getItem("Authenticated") == "Partial") {
+						//correct
+					} else if (localStorage.getItem("Authenticated") == "True") {
+                        //skip two step auth
+                        window.location.href = "./generate.html";
+					}
+                    else{
+						//site direct accessed. Prevent it
+						window.location.href = "./auth.html";
+					}
+                    
+				}
+			</script>
+            <script>
+                //prevent opening of inspect element.
+                const devtools = {
+                isOpen: false,
+                orientation: undefined,
+            };
+            
+            const threshold = 170;
+            
+            const emitEvent = (isOpen, orientation) => {
+                globalThis.dispatchEvent(new globalThis.CustomEvent('devtoolschange', {
+                    detail: {
+                        isOpen,
+                        orientation,
+                    },
+                }));
+            };
+            setInterval(function () {
+                            // your code goes here...
+                            if(check()==true){
+                                window.location.href = "./auth.html";//inspect element opened
+            
+                            }
+                            console.log(check())
+                        
+                        }, 2 * 1000); // 60 * 1000 milsec
+            
+            function check(){
+                const emitEvents = true
+                const widthThreshold = globalThis.outerWidth - globalThis.innerWidth > threshold;
+                const heightThreshold = globalThis.outerHeight - globalThis.innerHeight > threshold;
+                const orientation = widthThreshold ? 'vertical' : 'horizontal';
+            
+                if (
+                    !(heightThreshold && widthThreshold)
+                    && ((globalThis.Firebug && globalThis.Firebug.chrome && globalThis.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)
+                ) {
+                    if ((!devtools.isOpen || devtools.orientation !== orientation) && emitEvents) {
+                        emitEvent(true, orientation);
+                    }
+            
+                    devtools.isOpen = true;
+                    return true;
+                    devtools.orientation = orientation;
+                } else {
+                    if (devtools.isOpen && emitEvents) {
+                        emitEvent(false, undefined);
+                    }
+            
+                    devtools.isOpen = false;
+                    devtools.orientation = undefined;
+                    return false;
+                }
+            };
+            </script>
+		</div>
+	</body>
+</html>
