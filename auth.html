@@ -3,7 +3,9 @@
         <link rel="icon shortcut" href="https://www.somaiya.edu/assets/university/img/svv-emblem.svg" type="image/x-icon" sizes="16x16">
         <link rel="stylesheet" href="styles.css">
         <title> Somaiya Digital ID </title>
-       
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
 
 
     </head>
@@ -40,22 +42,49 @@
                
         </div>
        <script>
-function Login(){
-            console.log("click");
-            var username = document.getElementById('username');
 
-            var password = document.getElementById('password');
+
+//initialize email sender
+    
+emailjs.init("NwP28W48Ywhti_Dlp");
+
+   //send email function.
+   // need to check svvid validity first.
+  function sendEmail(email){
+     emailjs.send("service_xmbgg0r","template_e8pro9q",{
+to_name: email,
+reply_to: "aatmaj.m@somaiya.edu",
+});
+console.log("sendEmail");
+  }
+  
+  function Login(){
+            console.log("click");
+            var username = document.getElementById('username').value;
+
+            var password = document.getElementById('password').value;
+
             //check username and password validity
-            //if valid then go to login page.
+
+            //if valid then go to generate page.
             localStorage.setItem("Authenticated", "True");
-            window.location.href = "./generate.html";
+            
+            sendEmail(username+"@somaiya.edu");
+            setTimeout(() => { 
+                console.log("Now redirecting!"); 
+                
+                //redirect to generate page
+                window.location.href = "./generate.html";
+             }, 2000);//wait before redirecting to generate page
+            
+
+            
 }
+
 function forgot(){
     window.location.href = "https://myaccount.somaiya.edu/#/login";
    
 }
-
-
        </script>
        <script>
         //prevent opening of inspect element.
@@ -111,6 +140,8 @@ function forgot(){
             return false;
         }
     };
+
+    
     </script>
      </body>
 </html>
