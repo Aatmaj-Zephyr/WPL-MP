@@ -141,7 +141,7 @@
 	
 }
 .otpcontainer {
-	position: absolute; left: 25%;  top: 49.93%; bottom: 42.21%; height: 7%;
+	position: absolute;  top: 40%; bottom: 42.21%; height: 7%;
 }
 .otp{
 	padding-left: 3%; 
@@ -149,13 +149,13 @@
 	justify-content: center;
 	margin: 5%;
 	height: 100%;
-	width: 7%;
+	width: 14%;
 	border: 1px solid #000000;
 	
 	border-radius: 5px;
 	text-align: center;
 	font-family: arimo;
-	font-size: 1.2rem;
+	font-size: 5.2rem;
 	background: #eef2f3;
 }
 .photoplaceHolder {
