@@ -7,7 +7,9 @@
 			type="image/x-icon"
 			sizes="16x16"
 		/>
-
+		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js "></script>
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
@@ -25,10 +27,10 @@
 			<div class="IDtransparentframe">
 				<div class="clgText">K.J. Somaiya College of Engineering</div>
 			</div>
-			<div id="name" class="name">AATMAJ K MHATRE</div>
-			<div id="IDnum" class="IDNo">ID No: 1620210251</div>
-			<div id="bloodGroup" class="bloodGroup">Blood Group: O+</div>
-			<div id="telephone" class="tel">Tel:9820775339</div>
+			<div id="name" class="name"> abcdefgh</div>
+			<div id="IDnum" class="IDNo">ID No:  1234</div>
+			<div id="bloodGroup" class="bloodGroup">Blood Group: Z+</div>
+			<div id="telephone" class="tel">Tel:999999999</div>
 			<img
 				class="somaiyaTrust"
 				src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg"
@@ -90,8 +92,62 @@ function check(){
 };
 </script>
 		<script>
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBCm5eIm3Eh0TbLqotNgsX9m3AjW_ZUCNg",
+  authDomain: "wpl-mini-project.firebaseapp.com",
+  databaseURL: "https://wpl-mini-project-default-rtdb.firebaseio.com",
+  projectId: "wpl-mini-project",
+  storageBucket: "wpl-mini-project.appspot.com",
+  messagingSenderId: "696331304474",
+  appId: "1:696331304474:web:837b7598baf25502679ba3",
+  measurementId: "G-6HN1C9SXMF"
+};
+firebase.initializeApp(firebaseConfig);
+console.log(firebase);
+            var id=111111;
+			var name="abcd";
+			var phone="9978890";
+			var bg="Z-";
             
-			//preventing inspect element
+            //do in php
+			//iterate over firebase database
+			for(let num=0;num<=201;num++){
+			var db = firebase.database().ref('/' + num);
+
+			db.once('value', (snapshot) => { //change monitored only once.
+				if(localStorage.getItem("mail")==snapshot.val().mail){
+					console.log("user found")
+					id=snapshot.val().Rollno
+					name= snapshot.val().name +" "+snapshot.val().fatherName.charAt(0) +" "+snapshot.val().Surname;
+					phone = snapshot.val().number;
+					bg = snapshot.val().bloodgrp;
+					document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
+			document.getElementById("IDnum").innerHTML="ID No: "+id;
+			
+			document.getElementById("name").innerHTML=name;
+			document.getElementById("bloodGroup").innerHTML="Blood Group: "+bg;
+			document.getElementById("telephone").innerHTML="Tel:"+phone;
+
+
+				} 
+				
+  		  });
+		  }
+           
+
+
+			/**************SAFETY*********/
+			//prevent inspect by refreshing after every few seconds
+                        /*
+            setInterval(function() {
+                // your code goes here...
+            
+            
+            }, 60 * 1000); // 60 * 1000 milsec
+
+            */
+//preventing inspect element
 
 			// Disable right-click
 			document.addEventListener("contextmenu", (e) => e.preventDefault());
@@ -111,25 +167,7 @@ function check(){
 				)
 					return false;
 			};
-            
-            //do in php
-            let id=1620210251;
-            document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
-			document.getElementById("IDnum").innerHTML="ID No: "+id;
 			
-			//document.getElementById("name").innerHTML="name";
-			//document.getElementById("name").innerHTML="name";
-
-			//prevent inspect by refreshing after every few seconds
-                        /*
-            setInterval(function() {
-                // your code goes here...
-            
-            
-            }, 60 * 1000); // 60 * 1000 milsec
-
-            */
-
 			//safery measures to prevent storage of id card by refreshing after every 60 seconds
 			setInterval(function () {
 				// your code goes here...
