@@ -35,6 +35,10 @@
 				class="somaiyaTrust"
 				src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg"
 			/>
+			<img id="signature"
+				class="sign"
+				src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg"
+			/>
 		</div>
 <script>
     //prevent opening of inspect element.
@@ -123,6 +127,8 @@ console.log(firebase);
 					phone = snapshot.val().number;
 					bg = snapshot.val().bloodgrp;
 					document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
+					document.getElementById("signature").src="https://myaccount.somaiya.edu/images/Signature/S"+id+".png";
+
 			document.getElementById("IDnum").innerHTML="ID No: "+id;
 			
 			document.getElementById("name").innerHTML=name;
