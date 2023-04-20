@@ -357,7 +357,7 @@
 	position: absolute;
 	width: 20%;
 	height: 10%;
-	right: 60%;
+	right: 33%;
 	top: 85%;
 }
 
@@ -371,4 +371,11 @@
 	height: 20%;
 	right: 10%;
 	top: 80%;
+}
+.qr{
+	position: absolute;
+	width: 20%;
+	height: 10%;
+	left: 5%;
+	top: 81%;
 }
