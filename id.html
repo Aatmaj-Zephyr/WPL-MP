@@ -11,6 +11,9 @@
 		<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-messaging.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js "></script>
 		<link rel="stylesheet" href="styles.css" />
+		<script src=
+		"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+			</script>
 	</head>
 	<body>
 		<div class="IDContainer">
@@ -39,6 +42,7 @@
 				class="sign"
 				src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg"
 			/>
+			<div class="qr" id="qrcode"></div>
 		</div>
 <script>
     //prevent opening of inspect element.
@@ -134,7 +138,7 @@ console.log(firebase);
 			document.getElementById("name").innerHTML=name;
 			document.getElementById("bloodGroup").innerHTML="Blood Group: "+bg;
 			document.getElementById("telephone").innerHTML="Tel:"+phone;
-
+			var qrcode = new QRCode("qrcode",  ""+id);
 
 				} 
 				
