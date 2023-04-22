@@ -30,10 +30,10 @@
 			<div class="IDtransparentframe">
 				<div class="clgText">K.J. Somaiya College of Engineering</div>
 			</div>
-			<div id="name" class="MName"> abcdefgh</div>
+			<div id="name" class="name"> abcdefgh</div>
 			<div id="IDnum" class="IDNo">ID No:  1234</div>
 			<div id="bloodGroup" class="bloodGroup">Blood Group: Z+</div>
-			<div id="telephone" class="Tel">Tel:999999999</div>
+			<div id="telephone" class="tel">Tel:999999999</div>
 			<img
 				class="somaiyaTrust"
 				src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg"
@@ -128,8 +128,8 @@ console.log(firebase);
 				if(localStorage.getItem("mail")==snapshot.val().mail){
 					console.log("user found")
 					id=snapshot.val().Rollno
-					name= snapshot.val().name +" "+snapshot.val().fatherName.charAt(0) +" "+snapshot.val().Surname;
-					phone = snapshot.val().number;
+					name= snapshot.val().MName +" "+snapshot.val().fatherName.charAt(0) +" "+snapshot.val().Surname;
+					phone = snapshot.val().Tel;
 					bg = snapshot.val().bloodgrp;
 					document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
 					document.getElementById("signature").src="https://myaccount.somaiya.edu/images/Signature/S"+id+".png";
