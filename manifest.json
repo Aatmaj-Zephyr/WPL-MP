@@ -1,0 +1,43 @@
+{
+    "name": "Somaiya Digital ID",
+    "short_name": "Digital ID",
+    "start_url": "/WPL-MP/index.html",
+    "id":"/WPL-MP/index.html",
+    "display": "standalone",
+    "description": "Generate Digital ID",
+    "lang": "English",
+    "dir": "auto",
+    "scope":"/WPL-MP/",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://www.somaiya.edu/assets/university/img/svv-emblem.svg",
+            "sizes": "32x32",
+            "type": "svg",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./logo.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./logosmall.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    
+    "shortcuts": [
+        {
+            "name":"Somaiya Digital ID",
+            "url":"/WPL-MP/generate.html",
+            "description":"shortcut"
+        }
+    ],
+    "gcm_sender_id": "103953800507"
+    }
