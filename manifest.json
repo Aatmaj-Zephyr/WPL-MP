@@ -1,7 +1,7 @@
 {
     "name": "Somaiya Digital ID",
     "short_name": "Digital ID",
-    "start_url": "/WPL-MP/index.html",
+    "start_url": "/WPL-MP/generate.html",
     "id":"/WPL-MP/index.html",
     "display": "standalone",
     "description": "Generate Digital ID",
