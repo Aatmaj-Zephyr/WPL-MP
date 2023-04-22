@@ -7,5 +7,7 @@ Features
 1) Two step auth
 2) Tamperproof website
 3) Easy to use
-
+4) Validate via QR code
 https://aatmaj-zephyr.github.io/WPL-MP/
+
+QR code present in the ID card can be scanned and validated at every entry gate
