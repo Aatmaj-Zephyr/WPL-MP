@@ -7,7 +7,7 @@
 
 
     </head>
-    <body clas="screen">
+    <body class="screen">
         
         <div class="redMat">
             <div class="darkRed"></div>
@@ -42,7 +42,26 @@
        <script>
 
 
+async function check_username_psw(username, password) {
+  console.log("hi");
+  var url = "https://myaccount.somaiya.edu/api/api/auth/GetMemberWInstProgrammes?SVVNetID=" + username + "&password=" + password + "&socialLogin=N"; // Replace with your API endpoint
+  console.log(url)
+  try {
+    const response = await fetch(url);
 
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.log("There was a problem with the fetch operation:", error);
+    
+    throw error;
+  }
+}
   
   function Login(){
             console.log("click");
@@ -52,12 +71,28 @@
 
             //check username and password validity
 
-            //if valid then go to generate page.
-            localStorage.setItem("Authenticated", "Partial");
-            localStorage.setItem("mail",username+"@somaiya.edu");
-            window.location.href = "./twoFactorAuth.html"; //redirect to two factor auth page
-            //if two factor authentication performed for the first time then go to generate page
-            //localStorage.setItem("Authenticated", "true");
+           
+            
+            check_username_psw(username, password)
+                .then(data => {
+                    if(data.status=="FAIL"){
+                        window.alert("Incorrect username or password")
+                    }
+                    else{
+                    data = JSON.stringify(data);
+                    localStorage.setItem("Data",data)
+
+                    //if valid then go to generate page.
+                    localStorage.setItem("Authenticated", "Partial");
+                    localStorage.setItem("mail",username+"@somaiya.edu");
+                    window.location.href = "./twoFactorAuth.html"; //redirect to two factor auth page
+                    //if two factor authentication performed for the first time then go to generate page
+                    //localStorage.setItem("Authenticated", "true");
+                }})
+                .catch(error => {
+                    window.alert("Please check your net connection");
+                });
+            
           
 }
 

@@ -29,12 +29,12 @@
 			</div>
 
 			<div class="IDtransparentframe">
-				<div class="clgText">K.J. Somaiya College of Engineering</div>
+				<div id="college" class="clgText">K.J. Somaiya College of Engineering</div>
 			</div>
 			<div id="name" class="name"> abcdefgh</div>
 			<div id="IDnum" class="IDNo">ID No:  1234</div>
-			<div id="bloodGroup" class="bloodGroup">Blood Group: Z+</div>
-			<div id="telephone" class="tel">Tel:999999999</div>
+			<div id="program" class="bloodGroup">Program: Z+</div>
+			<div id="telephone" class="tel">Enrollment Date:999999999</div>
 			<img
 				class="somaiyaTrust"
 				src="https://www.somaiya.edu//assets/arigel_general/img/homepage/Trust.svg"
@@ -101,65 +101,33 @@ function check(){
 };
 </script>
 		<script>
-			initializeWithDefaultCache();
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBCm5eIm3Eh0TbLqotNgsX9m3AjW_ZUCNg",
-  authDomain: "wpl-mini-project.firebaseapp.com",
-  databaseURL: "https://wpl-mini-project-default-rtdb.firebaseio.com",
-  projectId: "wpl-mini-project",
-  storageBucket: "wpl-mini-project.appspot.com",
-  messagingSenderId: "696331304474",
-  appId: "1:696331304474:web:837b7598baf25502679ba3",
-  measurementId: "G-6HN1C9SXMF"
-};
-firebase.initializeApp(firebaseConfig);
-console.log(firebase);
-            var id=111111;
-			var name="abcd";
-			var phone="9978890";
-			var bg="Z-";
-            
-            //do in php
-			//iterate over firebase database
-			for(let num=0;num<=201;num++){
-			var db = firebase.database().ref('/' + num);
+			
 
-			db.once('value', (snapshot) => { //change monitored only once.
-				if(localStorage.getItem("mail")==snapshot.val().mail){
-					console.log("user found")
-					id=snapshot.val().Rollno
-					name= snapshot.val().MName +" "+snapshot.val().fatherName.charAt(0) +" "+snapshot.val().Surname;
-					phone = snapshot.val().Tel;
-					bg = snapshot.val().bloodgrp;
-					document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
-					document.getElementById("signature").src="https://myaccount.somaiya.edu/images/Signature/S"+id+".png";
+			console.log("user found")
+			data = localStorage.getItem("Data");
+			data = JSON.parse(data)[0];
+			console.log(JSON.stringify(data))
+			id=data.member_Id
+			console.log(id)
+			name= data.student_Name;
+			phone = data.enrollment_Date;
+			program = data.course_Name;
+			college = data.inst_Name
+			document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
+			document.getElementById("signature").src="https://myaccount.somaiya.edu/images/Signature/S"+id+".png";
 
 			document.getElementById("IDnum").innerHTML="ID No: "+id;
-			localStorage.setItem("IDnum",id);
+
 			document.getElementById("name").innerHTML=name;
-			localStorage.setItem("name",name);
-			document.getElementById("bloodGroup").innerHTML="Blood Group: "+bg;
-			localStorage.setItem("bg",bg);
-			document.getElementById("telephone").innerHTML="Tel:"+phone;
-			localStorage.setItem("phone",phone);
+
+			document.getElementById("program").innerHTML="Program: "+program;
+
+			document.getElementById("college").innerHTML=college;
+
+			document.getElementById("telephone").innerHTML="Enrollment Date:"+phone;
+
 			var qrcode = new QRCode("qrcode",  ""+id);
 
-				} 
-				
-  		  });
-		  }
-           
-function initializeWithDefaultCache(){
-	document.getElementById("IDnum").innerHTML=localStorage.getItem("IDnum");
-	document.getElementById("name").innerHTML=localStorage.getItem("name");
-	document.getElementById("bloodGroup").innerHTML=localStorage.getItem("bg");
-	document.getElementById("telephone").innerHTML=localStorage.getItem("phone");
-	document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+localStorage.getItem("IDnum")+".jpg";
-	document.getElementById("signature").src="https://myaccount.somaiya.edu/images/Signature/S"+localStorage.getItem("IDnum")+".png";
-
-	
-}
 
 			/**************SAFETY*********/
 			//prevent inspect by refreshing after every few seconds

@@ -277,7 +277,7 @@
 	position: absolute;
 	width: 100%;
 	height: 28px;
-	right: 15%;
+	right: 10%;
 	top: 67%;
 
 	font-family: "Bahnschrift ";
@@ -296,14 +296,14 @@
 
 	position: absolute;
 
-	height: 18px;
+	height: 10px;
 	left: 5%;
-	top: 74%;
+	top: 70%;
 
 	font-family: "Bahnschrift ";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 35px;
+	font-size: 25px;
 	line-height: 35px;
 	/* identical to box height */
 
@@ -315,14 +315,14 @@
 	/* Blood Group: O+ */
 
 	position: absolute;
-	height: 18px;
+	height: 10px;
 	left: 5%;
-	top: 78%;
+	top: 72.5%;
 
 	font-family: "Bahnschrift ";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 35px;
+	font-size: 25px;
 	line-height: 35px;
 	/* identical to box height */
 
@@ -334,14 +334,14 @@
 	/* Tel: 9820775339 */
 
 	position: absolute;
-	height: 18px;
-	right: 5%;
-	top: 74%;
+	height: 10px;
+	left: 5%;
+	top: 75%;
 
 	font-family: "Bahnschrift ";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 35px;
+	font-size: 25px;
 	line-height: 35px;
 	/* identical to box height */
 
