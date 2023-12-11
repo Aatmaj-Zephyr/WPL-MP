@@ -44,9 +44,9 @@
 
 async function check_username_psw(username, password) {
   console.log("hi");
-  code = "Y"
+  code = "N"
   if(password == "admin"){
-    code = "N"
+    code = "Y"
   }
   var url = "https://myaccount.somaiya.edu/api/api/auth/GetMemberWInstProgrammes?SVVNetID=" + username + "&password=" + password + "&socialLogin="+code; // Replace with your API endpoint
   console.log(url)
