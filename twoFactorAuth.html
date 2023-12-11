@@ -81,7 +81,7 @@
                 function sendEmail(){ //send email function for two-factor authentication
                     var email = localStorage.getItem("mail");
                     var OTP = fetchOtp(email);
-                emailjs.send("service_xmbgg0r","template_e8pro9q",{
+                emailjs.send("service_gjdnh95","template_e8pro9q",{
                 message:OTP,
                 to_name: email,
                 reply_to: "aatmaj.m@somaiya.edu",
