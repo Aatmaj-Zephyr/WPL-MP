@@ -23,9 +23,9 @@
 				src="https://www.somaiya.edu/assets/university/img/homepage/university-logo.svg"
 			/>
 			<div class="IDRedMat">
-				<div class="IDDarkRed"></div>
+				<div id="studentmat" class="IDDarkRed"></div>
 				<img id="image" src="https://avatars.githubusercontent.com/u/83284294?v=4" class="photoplaceHolder">
-				<div class="studentText">STUDENT</div>
+				<div id="studenttext" class="studentText">STUDENT</div>
 			</div>
 
 			<div class="IDtransparentframe">
@@ -126,6 +126,16 @@ function check(){
 
 			document.getElementById("telephone").innerHTML="Enrollment Date:"+phone;
 
+			if(program === null){
+				//faculty
+							document.getElementById("program").innerHTML="";
+							document.getElementById("telephone").innerHTML="";
+							document.getElementById("studenttext").innerHTML="FACULTY"
+							document.getElementById("studentmat").className="facultymat"
+							console.log("is faculty")
+
+
+			}
 			var qrcode = new QRCode("qrcode",  ""+id);
 
 

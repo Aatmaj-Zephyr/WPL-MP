@@ -177,6 +177,7 @@
 
 	transform: rotate(-90deg);
 }
+
 .IDtransparentframe {
 	/* Frame 1 */
 
@@ -233,6 +234,20 @@
 
 	background: #ca0303;
 }
+
+.facultymat {
+	/* KJSCE dark red */
+
+	position: relative;
+	height: 100%;
+	width: 80%;
+	left: 20%;
+	right: 0%;
+	top: 0%;
+
+	background: #00932f;
+}
+
 .photoplaceHolder {
 	/* Rectangle 1 */
 
