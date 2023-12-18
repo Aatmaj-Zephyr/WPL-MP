@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title> Somaiya Digital ID </title>
+		<title>Somaiya Digital ID</title>
 		<link
 			rel="icon shortcut"
 			href="https://www.somaiya.edu/assets/university/img/svv-emblem.svg"
@@ -9,8 +9,7 @@
 		/>
 		<link rel="stylesheet" href="styles.css" />
 
-		<link rel="manifest" href="./manifest.json" />     
-
+		<link rel="manifest" href="./manifest.json" />
 	</head>
 	<body clas="screen">
 		<div class="redMat">
@@ -45,26 +44,21 @@
 				}
 				registerSW();
 				async function registerSW() {
-    console.log('Registering service worker for app');
+					console.log("Registering service worker for app");
 
+					try {
+						await navigator.serviceWorker
+							.register("/Mini-project/serviceWorker.js")
 
-    try {
-        await navigator
-            .serviceWorker.register("/Mini-project/serviceWorker.js")
-
-
-
-            .then(function (registration) {
-                console.log('Service worker (app) successfully registered.');
-                console.log(registration.scope);
-
-            })
-    }
-    catch (e) {
-        console.log('SW registration for app failed');
-        console.log(e.message);
-    }
-}
+							.then(function (registration) {
+								console.log("Service worker (app) successfully registered.");
+								console.log(registration.scope);
+							});
+					} catch (e) {
+						console.log("SW registration for app failed");
+						console.log(e.message);
+					}
+				}
 			</script>
 		</div>
 	</body>

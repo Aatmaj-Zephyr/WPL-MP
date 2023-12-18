@@ -98,8 +98,12 @@ function check(){
 		devtools.orientation = undefined;
         return false;
 	}
-};
+   };
 </script>
+
+
+
+
 		<script>
 			
 
@@ -110,7 +114,7 @@ function check(){
 			id=data.member_Id
 			console.log(id)
 			name= data.student_Name;
-			phone = data.enrollment_Date;
+			enrollmentDate = data.enrollment_Date;
 			program = data.course_Name;
 			college = data.inst_Name
 			document.getElementById("image").src="https://myaccount.somaiya.edu/images/ID/"+id+".jpg";
@@ -124,7 +128,7 @@ function check(){
 
 			document.getElementById("college").innerHTML=college;
 
-			document.getElementById("telephone").innerHTML="Enrollment Date:"+phone;
+			document.getElementById("telephone").innerHTML="Enrollment Date: "+enrollmentDate;
 
 			if(program === null){
 				//faculty
@@ -140,16 +144,7 @@ function check(){
 
 
 			/**************SAFETY*********/
-			//prevent inspect by refreshing after every few seconds
-                        
-            setInterval(function() {
-                // your code goes here...
-            
-            
-            }, 60 * 1000); // 60 * 1000 milsec
-
-            
-//preventing inspect element
+			
 
 			// Disable right-click
 			document.addEventListener("contextmenu", (e) => e.preventDefault());

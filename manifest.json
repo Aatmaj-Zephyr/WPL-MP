@@ -7,9 +7,9 @@
     "description": "Generate Digital ID",
     "lang": "English",
     "dir": "auto",
-    "scope":"/WPL-MP/",
-    "theme_color": "#000000",
-    "background_color": "#000000",
+    "scope":"/WPL-MP/", 
+    "theme_color": "#ffabab",
+    "background_color": "#ffd7d7",
     "orientation": "any",
     "icons": [
         {
